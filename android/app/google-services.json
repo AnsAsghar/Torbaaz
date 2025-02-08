@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1005320003200",
+    "project_id": "torbaaz-menu-app",
+    "storage_bucket": "torbaaz-menu-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005320003200:android:5a1850fd1c62dfbb4f5065",
+        "android_client_info": {
+          "package_name": "com.example.torbaaz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuynik-cMBTAm10QHVMJ3fXjrHu5azsgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

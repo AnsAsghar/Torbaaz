@@ -1,0 +1,246 @@
+Restaurant Menu Details:
+
+### Meet N Eat
+
+#### Food Items and Prices:
+- Burgers:
+  - Classic Beef Burger - PKR 700
+  - Spicy Chicken Burger - PKR 750
+  - Veggie Delight - PKR 600
+  - Cheesy BBQ Burger - PKR 800
+- Wraps:
+  - Chicken Shawarma Wrap - PKR 850
+  - Beef Shawarma Wrap - PKR 900
+  - Zesty Veggie Wrap - PKR 750
+- Pasta:
+  - Alfredo Pasta - PKR 1100
+  - Spicy Arrabbiata Pasta - PKR 1150
+  - Creamy Mushroom Pasta - PKR 1200
+
+#### Food Deals:
+- Deal 1: Classic Burger + Fries + Drink - PKR 1300
+- Deal 2: 2 Shawarma Wraps + Fries - PKR 2000
+- Deal 3: Pasta Platter (2 Pastas + Garlic Bread) - PKR 2500
+
+#### Pizza Sizes and Prices:
+- Medium Pepperoni Pizza - PKR 1500
+- Large Pepperoni Pizza - PKR 1900
+- Medium Veggie Pizza - PKR 1400
+- Large Veggie Pizza - PKR 1800
+- Family Size BBQ Pizza - PKR 2500
+
+#### Types of Food:
+- Standard, Special, Classic
+
+#### Drinks:
+- Soft Drinks - PKR 250
+- Fresh Juices - PKR 350
+- Iced Coffees - PKR 400
+
+#### Food Types:
+- Starters, Pizza, Pasta, Burger, Wraps, Shawarma, Fries
+
+#### Contact and Other Information:
+- Phone: 0328-5500112, 0310-5083300
+- Timing: 11 AM - 11 PM
+- Location: Opposite Nadra Office, Multan Road, Jahanian
+- Delivery Fee: PKR 300
+
+---
+
+### Khana Khazana
+
+#### Food Items and Prices:
+- Starters:
+  - Samosa (2 pcs) - PKR 300
+  - Pakora Platter - PKR 600
+  - Seekh Kabab (2 pcs) - PKR 700
+- Main Courses:
+  - Chicken Biryani - PKR 1000
+  - Mutton Karahi - PKR 1800
+  - Beef Nihari - PKR 1600
+- Desserts:
+  - Gulab Jamun (2 pcs) - PKR 400
+  - Rasmalai - PKR 500
+  - Kheer - PKR 450
+
+#### Food Deals:
+- Family Meal: Chicken Biryani + Mutton Karahi + Naan + Dessert - PKR 3500
+- Lunch Special: Samosa + Chicken Biryani - PKR 1200
+- Weekend Feast: Nihari + Seekh Kabab + Dessert - PKR 3000
+
+#### Types of Food:
+- Premium, Special
+
+#### Drinks:
+- Lassi - PKR 450
+- Chai - PKR 300
+- Green Tea - PKR 250
+
+#### Food Types:
+- Starters, Biryani, Curry, Desserts
+
+#### Contact and Other Information:
+- Phone: 0345-7277634, 0309-4152186
+- Timing: 12 PM - 10 PM
+- Location: Main Super Highway Bahawal Pur Road Near Total Petrol Pump Jahanian
+- Delivery Fee: PKR 400
+
+---
+
+### EatWay
+
+#### Food Items and Prices:
+- Sandwiches:
+  - Turkey Club - PKR 750
+  - Veggie Sub - PKR 700
+  - Chicken BLT - PKR 850
+- Rolls:
+  - Chicken Roll - PKR 600
+  - Beef Roll - PKR 700
+  - Spicy Veggie Roll - PKR 650
+- Fries:
+  - Regular Fries - PKR 400
+  - Loaded Fries - PKR 600
+  - Curly Fries - PKR 500
+
+#### Food Deals:
+- Deal 1: Sandwich + Fries + Drink - PKR 1200
+- Deal 2: 2 Rolls + Fries - PKR 1500
+- Deal 3: Combo Meal (Sandwich + Roll + Drink) - PKR 1800
+
+#### Types of Food:
+- Standard, Make Your Own Deals
+
+#### Drinks:
+- Iced Tea - PKR 250
+- Lemonade - PKR 300
+- Milkshakes - PKR 450
+
+#### Food Types:
+- Sandwich, Rolls, Fries
+
+#### Contact and Other Information:
+- Phone: 0301-0800777, 0310-0800777
+- Timing: 10 AM - 9 PM
+- Location: Rehmat Villas, Phase 1, Canal Road, Jahanian
+- Delivery Fee: PKR 300
+
+---
+
+### Crust Bros
+
+#### Food Items and Prices:
+- Pizzas:
+  - Margherita (Medium) - PKR 1300
+  - BBQ Chicken (Large) - PKR 2000
+  - Four Cheese (Medium) - PKR 1500
+  - Supreme Tandoori (Large) - PKR 2200
+- Sides:
+  - Garlic Bread - PKR 500
+  - Cheesy Sticks - PKR 700
+
+#### Food Deals:
+- Party Deal: 2 Large Pizzas + 2 Liter Drink - PKR 3500
+- Combo Deal: Medium Pizza + Garlic Bread + Drink - PKR 2500
+- Family Combo: 2 Large Pizzas + Sides - PKR 4500
+
+#### Pizza Sizes and Prices:
+- Medium - PKR 1300 to PKR 1500
+- Large - PKR 1800 to PKR 2200
+
+#### Types of Food:
+- Premium, Special
+
+#### Drinks:
+- Soft Drinks - PKR 200
+- Mineral Water - PKR 150
+- Fruit Juices - PKR 300
+
+#### Food Types:
+- Pizza, Sides
+
+#### Contact and Other Information:
+- Phone: 0325-8003399, 0327-8003399
+- Timing: 12 PM - 12 AM
+- Location: Loha Bazar, Jahanian
+- Delivery Fee: PKR 350
+
+---
+
+### Meera Jee
+
+#### Food Items and Prices:
+- Starters:
+  - Spring Rolls - PKR 400
+  - Chicken Tikka - PKR 800
+  - Veggie Pakora - PKR 500
+- Main Courses:
+  - Paneer Butter Masala - PKR 1500
+  - Lamb Rogan Josh - PKR 1800
+  - Chicken Korma - PKR 1400
+
+#### Food Deals:
+- Family Platter: Paneer Butter Masala + Lamb Rogan Josh + Naan - PKR 3000
+- Dinner for Two: Chicken Tikka + Main Course + Dessert - PKR 2500
+- Festive Feast: 3 Main Courses + 2 Desserts - PKR 5000
+
+#### Types of Food:
+- Special, Classic
+
+#### Drinks:
+- Masala Chai - PKR 300
+- Soda - PKR 200
+- Sweet Lassi - PKR 350
+
+#### Food Types:
+- Starters, Curry, Platter
+
+#### Contact and Other Information:
+- Phone: 0309-7000178, 0306-7587938
+- Timing: 11:00 AM ΤΟ 01:00 AM
+- Location: Branch 1: Near Ice Factory Rahim Shah Road, Jahanian
+- Delivery Fee: PKR 400
+
+---
+
+### Pizza Slice
+
+#### Food Items and Prices:
+- Pizzas:
+  - Hawaiian Pizza (Small) - PKR 1000
+  - Meat Lovers (Large) - PKR 2200
+  - Veggie Supreme (Medium) - PKR 1500
+  - Cheesy Delight (Small) - PKR 1100
+- Sides:
+  - Garlic Bread - PKR 500
+  - Chicken Wings (6 pcs) - PKR 800
+  - Mozzarella Sticks - PKR 700
+
+#### Food Deals:
+- Slice Deal: 2 Pizza Slices + Drink - PKR 900
+- Family Feast: Large Pizza + 2 Sides + Drink - PKR 3000
+- Pizza Party: 3 Medium Pizzas + 3 Drinks - PKR 4500
+
+#### Pizza Sizes and Prices:
+- Small - PKR 1000 to PKR 1200
+- Medium - PKR 1400 to PKR 1600
+- Large - PKR 1800 to PKR 2200
+
+#### Types of Food:
+- New Edition, Special
+
+#### Drinks:
+- Soda - PKR 200
+- Milkshake - PKR 500
+- Cold Coffee - PKR 400
+
+#### Food Types:
+- Pizza, Sides, Wings
+
+#### Contact and Other Information:
+- Phone: 0308-4824792, 0311-4971155, 0303-4971155
+- Timing: 11 AM - 10 PM
+- Location: Main Khanewall Highway Road Infront of Qudas Masjid Jahanian
+- Delivery Fee: PKR 300
+

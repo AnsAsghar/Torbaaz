@@ -1,0 +1,26 @@
+targets:
+  $default:
+    builders:
+      # Configure the builders
+      brick_offline_first_with_supabase_build|offline_first_with_supabase_model_generator:
+        enabled: true
+      brick_offline_first_with_supabase_build|offline_first_with_supabase_sqlite_schema_generator:
+        enabled: true
+        options:
+          # Directory to store migrations
+          migration_directory: lib/brick/db/
+
+builders:
+  # These are used by Brick and shouldn't need to be modified
+  brick_offline_first_with_supabase_build:
+    import: "package:brick_offline_first_with_supabase_build/builders.dart"
+    builder_factories:
+      - "offlineFirstWithSupabaseModelBuilder"
+      - "offlineFirstWithSupabaseSqliteSchemaBuilder"
+    build_extensions:
+      .dart:
+        - adapter.g.dart
+        - schema.g.dart
+    auto_apply: root_package
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"] 

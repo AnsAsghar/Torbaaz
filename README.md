@@ -100,33 +100,48 @@ Below is a visual showcase of the Torbaaz Menu Flutter App. Each screenshot high
 ![Food Deals Screen](assets/images/screenshot_food_deals.png)  
 <small>“Food Deals” page showing special offers from “EatWay” with “Order Now” buttons.</small>
 
+## Screenshots / UI Gallery
+
+Below is a visual showcase of the Torbaaz Menu Flutter App. Each screenshot highlights a core section of the application’s UI. The filenames below must match exactly as they appear in `assets/images/`.
+
+> **Note:** Ensure that all of these PNG files are stored in `assets/images/` and declared in your `pubspec.yaml` under `flutter.assets:` (including spaces and parentheses exactly as shown).
+
+### Main Menu Screen
+
+![Main Menu Screen](assets/images/Screenshot (4).png)  
+<small>“Hello, Customer!” heading with “Menus of All Restaurants”, category tabs, and scrolling menu cards.</small>
+
+### Food Deals Screen
+
+![Food Deals Screen](assets/images/Screenshot (5).png)  
+<small>“Food Deals” page showing special offers from “EatWay” with “Order Now” buttons.</small>
+
 ### Restaurant Details Screen
 
-![Restaurant Details Screen](assets/images/screenshot_restaurant_details.png)  
-<small>Detailed view of “Crust Bros Jahania”: banner image, description, address, phone number and “View on Map” button.</small>
+![Restaurant Details Screen](assets/images/Screenshot (6).png)  
+<small>Detailed view of “Crust Bros Jahania”: banner image, description, address, phone number, and “View on Map” button.</small>
 
 ### eTables (List of Items) Screen
 
-![eTables List of Items Screen](assets/images/screenshot_etables_list.png)  
+![eTables List of Items Screen](assets/images/Screenshot (7).png)  
 <small>“eTables” shows a searchable list of items (e.g., Burger Rs.399, Pizza Rs.649) with a heart icon to favourite.</small>
 
 ### Feedback Screen
 
-![Feedback Screen](assets/images/screenshot_feedback.png)  
+![Feedback Screen](assets/images/Screenshot (8).png)  
 <small>Vibrant feedback page prompting users to “Tell us about your experience with Torbaaz!” and “Open Instagram Page”.</small>
 
 ### Jarvis AI Assistant Screen
 
-![Jarvis AI Assistant Screen](assets/images/screenshot_ai_assistant.png)  
+![Jarvis AI Assistant Screen](assets/images/Screenshot (9).png)  
 <small>Jarvis welcome screen with example prompts (food categories, restaurant info, deals & prices).</small>
 
 ### About Screen
 
-![About Screen](assets/images/screenshot_about.png)  
-<small>“About Us” section with Torbaaz logo, contact email, Instagram button and developer description.</small>
+![About Screen](assets/images/Screenshot (10).png)  
+<small>“About Us” section with Torbaaz logo, contact email, Instagram button, and developer description.</small>
 
 ---
-
 ## Technology Stack
 
 - **Flutter SDK** (>= 3.0.0)  

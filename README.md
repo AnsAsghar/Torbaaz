@@ -41,51 +41,51 @@
 
 ### 🏠 Main App Interface
 <div align="center">
-  <img src="Screenshot (4).png" alt="App Home Screen" width="300"/>
+  <img src="Screenshot(4).png" alt="App Home Screen" width="300"/>
   <br/>
   <em>Main menu interface with restaurant categories and navigation</em>
 </div>
 
 <div align="center">
-  <img src="Screenshot (5).png" alt="Food Deals Page" width="300"/>
+  <img src="Screenshot(5).png" alt="Food Deals Page" width="300"/>
   <br/>
   <em>Special deals and combo offers section</em>
 </div>
 
 <div align="center">
-  <img src="Screenshot (6).png" alt="Restaurant Details" width="300"/>
+  <img src="Screenshot(6).png" alt="Restaurant Details" width="300"/>
   <br/>
   <em>Detailed restaurant information with ratings and contact details</em>
 </div>
 
 ### 🤖 AI Assistant Integration (OpenAI GPT-4)
 <div align="center">
-  <img src="Screenshot (7).png" alt="AI Assistant Chat Interface" width="300"/>
+  <img src="Screenshot(7).png" alt="AI Assistant Chat Interface" width="300"/>
   <br/>
   <em>OpenAI GPT-4 powered AI assistant with thread-based conversations</em>
 </div>
 
 <div align="center">
-  <img src="Screenshot (8).png" alt="AI Food Recommendations" width="300"/>
+  <img src="Screenshot(8).png" alt="AI Food Recommendations" width="300"/>
   <br/>
   <em>Intelligent food recommendations using OpenAI API</em>
 </div>
 
 ### 🍽️ Menu & Food Management
 <div align="center">
-  <img src="Screenshot (9).png" alt="Eatables Menu" width="300"/>
+  <img src="Screenshot(9).png" alt="Eatables Menu" width="300"/>
   <br/>
   <em>Comprehensive food menu with AI-powered search capabilities</em>
 </div>
 
 <div align="center">
-  <img src="Screenshot (10).png" alt="Food Items Display" width="300"/>
+  <img src="Screenshot(10).png" alt="Food Items Display" width="300"/>
   <br/>
   <em>Visual food items with detailed descriptions</em>
 </div>
 
 <div align="center">
-  <img src="Screenshot (11).png" alt="Admin Dashboard" width="300"/>
+  <img src="Screenshot(11).png" alt="Admin Dashboard" width="300"/>
   <br/>
   <em>Admin content management system with AI data uploads</em>
 </div>

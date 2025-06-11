@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import 'utils/supabase_test.dart';
 import 'pages/menu_page.dart';
 import 'pages/ai_assistant_page.dart';
 import 'pages/food_deals_page.dart';
@@ -8,55 +10,56 @@ import 'pages/restaurant_details_page.dart';
 import 'pages/eatables_list_page.dart';
 import 'pages/feedback_page.dart';
 import 'pages/about_page.dart';
+import 'pages/admin_login.dart';
+import 'theme/app_theme.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Supabase
+  await Supabase.initialize(
+    url: 'https://xfvbgpybpjumgdvfuidk.supabase.co',
+    anonKey:
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhmdmJncHlicGp1bWdkdmZ1aWRrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDMzMDg4NzYsImV4cCI6MjA1ODg4NDg3Nn0.733PF37TcZDhza5PINnn78B21UWZ_el_4U_IKQW8iLk',
+  );
+
+  // Test Supabase connection
+  try {
+    await SupabaseTest.testConnection();
+    debugPrint('Supabase connection test completed');
+  } catch (e) {
+    debugPrint('Error testing Supabase connection: $e');
+  }
+
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Torbaaz App',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-        scaffoldBackgroundColor: Colors.white,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-        textTheme: TextTheme(
-          displayLarge: GoogleFonts.poppins(
-              fontSize: 32, fontWeight: FontWeight.bold, color: Colors.black),
-          displayMedium: GoogleFonts.poppins(
-              fontSize: 28, fontWeight: FontWeight.w600, color: Colors.black),
-          displaySmall: GoogleFonts.poppins(
-              fontSize: 24, fontWeight: FontWeight.w500, color: Colors.black),
-          headlineMedium: GoogleFonts.poppins(
-              fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black),
-          headlineSmall: GoogleFonts.poppins(
-              fontSize: 18, fontWeight: FontWeight.w400, color: Colors.black),
-          titleLarge: GoogleFonts.poppins(
-              fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black),
-          bodyLarge: GoogleFonts.poppins(
-              fontSize: 14, fontWeight: FontWeight.normal, color: Colors.black),
-          bodyMedium: GoogleFonts.poppins(
-              fontSize: 12, fontWeight: FontWeight.normal, color: Colors.black),
-          titleMedium: GoogleFonts.poppins(
-              fontSize: 16, fontWeight: FontWeight.w500, color: Colors.black),
-          titleSmall: GoogleFonts.poppins(
-              fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black),
-        ),
-      ),
+      title: 'Torbaaz',
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.system,
       home: const SplashScreen(),
+      routes: {
+        '/admin': (context) => const AdminLogin(),
+      },
+      builder: (context, child) {
+        return MediaQuery(
+          data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+          child: child!,
+        );
+      },
     );
   }
 }
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -115,7 +118,7 @@ class _SplashScreenState extends State<SplashScreen>
 }
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
   State<MainScreen> createState() => _MainScreenState();
@@ -125,13 +128,11 @@ class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    const MenuPage(),
-    const FoodDealsPage(),
-    const RestaurantDetailsPage(),
-    const EatablesListPage(),
-    const FeedbackPage(),
-    const AIAssistantPage(),
-    const AboutPage(),
+    const MenuPage(), // Using existing MenuPage
+    const EatablesListPage(), // Using existing EatablesListPage
+    const FoodDealsPage(), // Using existing FoodDealsPage
+    const AIAssistantPage(), // Using existing AIAssistantPage
+    const MoreOptionsPage(), // New More Options page for additional pages
   ];
 
   void _onItemTapped(int index) {
@@ -144,61 +145,235 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_selectedIndex],
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Colors.black,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.orange.withOpacity(0.2),
-              blurRadius: 8,
-              offset: const Offset(0, -2),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.fastfood),
+            label: 'Eatables',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.local_offer),
+            label: 'Deals',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat_bubble_outline),
+            label: 'Assistant',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.more_horiz),
+            label: 'More',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.orange,
+        unselectedItemColor: Colors.grey,
+        onTap: _onItemTapped,
+      ),
+    );
+  }
+}
+
+// More Options page to access other pages
+class MoreOptionsPage extends StatelessWidget {
+  const MoreOptionsPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('More Options'),
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(16),
+        children: [
+          _buildOptionTile(
+            context,
+            'Restaurant Details',
+            Icons.restaurant,
+            Colors.orange,
+            () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const RestaurantDetailsPage(),
+              ),
+            ),
+          ),
+          _buildOptionTile(
+            context,
+            'Feedback',
+            Icons.feedback,
+            Colors.green,
+            () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const FeedbackPage(),
+              ),
+            ),
+          ),
+          _buildOptionTile(
+            context,
+            'About Us',
+            Icons.info,
+            Colors.blue,
+            () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const AboutPage(),
+              ),
+            ),
+          ),
+          const Divider(height: 32),
+          _buildOptionTile(
+            context,
+            'Admin Login',
+            Icons.admin_panel_settings,
+            Colors.purple,
+            () => Navigator.pushNamed(context, '/admin'),
+          ),
+          const Divider(height: 32),
+          const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              'Torbaaz v1.0.0',
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 14,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildOptionTile(
+    BuildContext context,
+    String title,
+    IconData icon,
+    Color color,
+    VoidCallback onTap,
+  ) {
+    return Card(
+      elevation: 2,
+      margin: const EdgeInsets.only(bottom: 16),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: ListTile(
+        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+        leading: Container(
+          padding: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: color.withOpacity(0.1),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Icon(icon, color: color),
+        ),
+        title: Text(
+          title,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
+        ),
+        trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+        onTap: onTap,
+      ),
+    );
+  }
+}
+
+// Simple placeholder pages for sections not yet implemented
+class ProfilePlaceholder extends StatelessWidget {
+  const ProfilePlaceholder({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Profile'),
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.person_outline,
+              size: 100,
+              color: Colors.orange,
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Profile Coming Soon',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Your personalized profile will be available here',
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.grey[600],
+              ),
+              textAlign: TextAlign.center,
             ),
           ],
         ),
-        child: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.restaurant_menu),
-              label: 'Menu',
-              backgroundColor: Colors.black,
+      ),
+    );
+  }
+}
+
+class SettingsPlaceholder extends StatelessWidget {
+  const SettingsPlaceholder({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Settings'),
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.settings_outlined,
+              size: 100,
+              color: Colors.orange,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.fastfood),
-              label: 'Food Deals',
-              backgroundColor: Colors.black,
+            SizedBox(height: 20),
+            Text(
+              'Settings Coming Soon',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.restaurant),
-              label: 'Restaurants',
-              backgroundColor: Colors.black,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.set_meal),
-              label: 'Eatables',
-              backgroundColor: Colors.black,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.feedback),
-              label: 'Feedback',
-              backgroundColor: Colors.black,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.smart_toy),
-              label: 'AI Assistant',
-              backgroundColor: Colors.black,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.info),
-              label: 'About',
-              backgroundColor: Colors.black,
+            SizedBox(height: 10),
+            Text(
+              'Customize your app experience',
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.grey[600],
+              ),
+              textAlign: TextAlign.center,
             ),
           ],
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.orange,
-          onTap: _onItemTapped,
-          type: BottomNavigationBarType.shifting,
-          unselectedItemColor: Colors.white,
-          showUnselectedLabels: true,
         ),
       ),
     );

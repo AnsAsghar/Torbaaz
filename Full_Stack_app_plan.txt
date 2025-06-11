@@ -1,0 +1,226 @@
+# Torbaaz Full-Stack App Implementation Plan
+
+## Overview
+This plan outlines the transformation of the Torbaaz app into a fully dynamic, Supabase-backed Flutter application with admin management capabilities and AI assistant integration.
+
+## Project Structure
+```
+lib/
+├── core/
+│   ├── config/
+│   │   └── env.dart
+│   ├── error/
+│   │   └── failures.dart
+│   ├── network/
+│   │   └── supabase_client.dart
+│   ├── utils/
+│   │   └── image_picker_util.dart
+│   └── widgets/
+│       └── loading_widget.dart
+├── features/
+│   ├── auth/
+│   │   ├── data/
+│   │   │   ├── datasources/
+│   │   │   │   └── auth_remote_datasource.dart
+│   │   │   ├── models/
+│   │   │   │   └── admin_model.dart
+│   │   │   └── repositories/
+│   │   │       └── auth_repository_impl.dart
+│   │   ├── domain/
+│   │   │   ├── entities/
+│   │   │   │   └── admin.dart
+│   │   │   ├── repositories/
+│   │   │   │   └── auth_repository.dart
+│   │   │   └── usecases/
+│   │   │       ├── check_admin_status.dart
+│   │   │       ├── sign_in.dart
+│   │   │       └── sign_out.dart
+│   │   └── presentation/
+│   │       ├── bloc/
+│   │       │   ├── auth_bloc.dart
+│   │       │   ├── auth_event.dart
+│   │       │   └── auth_state.dart
+│   │       ├── pages/
+│   │       │   ├── sign_in_page.dart
+│   │       │   └── splash_page.dart
+│   │       └── widgets/
+│   │           └── auth_form.dart
+│   ├── admin/
+│   ├── restaurants/
+│   ├── menu_categories/
+│   ├── food_items/
+│   ├── deals/
+│   └── ai_assistant/
+└── main.dart
+```
+
+## Implementation Phases
+
+### Phase 1: Project Setup (1-2 hours)
+1. Environment Setup:
+   - Create `.env` file with:
+     ```
+     SUPABASE_URL=your_supabase_url
+     SUPABASE_ANON_KEY=your_anon_key
+     OPENAI_API_KEY=your_openai_key
+     ```
+   - Execute SQL schema in Supabase
+   - Create public storage bucket
+
+2. Dependencies:
+   - supabase_flutter
+   - flutter_bloc
+   - get_it
+   - dartz
+   - freezed
+   - image_picker
+   - openai_dart
+   - flutter_dotenv
+
+3. Project Restructuring:
+   - Implement feature-first architecture
+   - Set up core utilities
+   - Configure build settings
+
+### Phase 2: Core Setup (2-3 hours)
+1. Core Utilities Implementation:
+   - Supabase client initialization
+   - Error handling with Dartz
+   - Image picker utilities
+   - Loading widgets
+   - Environment configuration
+
+2. Dependency Injection:
+   - GetIt service registration
+   - Repository bindings
+   - Use case registration
+   - BLoC registration
+
+### Phase 3: Authentication Feature (2-3 hours)
+1. Data Layer:
+   - AuthRemoteDataSource
+   - AdminModel
+   - AuthRepository implementation
+
+2. Domain Layer:
+   - Admin entity
+   - AuthRepository interface
+   - Authentication use cases
+
+3. Presentation Layer:
+   - AuthBloc implementation
+   - Sign-in page
+   - Authentication flow
+
+### Phase 4: Admin Dashboard (4-5 hours)
+1. Dashboard Structure:
+   - TabBar navigation
+   - Admin-only route protection
+   - Shared components
+
+2. Editor Tabs:
+   - Menu Editor
+   - Eatables Editor
+   - Deals Editor
+   - AI Data Editor
+
+3. Common Functionality:
+   - Image picking
+   - Form validation
+   - CRUD operations
+   - Loading states
+
+### Phase 5: Restaurant & Menu Management (3-4 hours)
+1. Restaurant Feature:
+   - Data models
+   - CRUD operations
+   - Image management
+   - List/detail views
+
+2. Menu Categories:
+   - Category management
+   - Icon uploads
+   - Sorting/ordering
+
+3. Food Items:
+   - Item management
+   - Category association
+   - Price management
+   - Image handling
+
+### Phase 6: Deals Management (2-3 hours)
+1. Deals Feature:
+   - Deal models
+   - CRUD interface
+   - Image uploads
+   - Price/discount handling
+
+2. UI Components:
+   - Deal cards
+   - Edit forms
+   - Preview functionality
+
+### Phase 7: AI Assistant Integration (3-4 hours)
+1. Data Management:
+   - File upload system
+   - Version tracking
+   - Storage integration
+
+2. Chat Service:
+   - OpenAI integration
+   - Context handling
+   - Response streaming
+
+3. User Interface:
+   - Chat UI
+   - Message threading
+   - Error handling
+
+### Phase 8: Testing & Documentation (2-3 hours)
+1. Testing:
+   - Unit tests
+   - Widget tests
+   - Integration tests
+
+2. Documentation:
+   - API documentation
+   - Setup guide
+   - Usage instructions
+
+## Timeline
+Total estimated time: 19-27 hours
+
+## Dependencies
+- Flutter SDK
+- Supabase account
+- OpenAI API key
+- Storage bucket configuration
+
+## Notes
+- Ensure proper error handling throughout
+- Implement proper loading states
+- Follow clean architecture principles
+- Maintain consistent UI/UX
+- Regular testing at each phase
+- Document all major components
+
+## Future Enhancements
+1. Offline support
+2. Push notifications
+3. Analytics integration
+4. Performance monitoring
+5. User feedback system
+
+## Security Considerations
+1. Proper authentication flow
+2. Secure storage of credentials
+3. Input validation
+4. Rate limiting
+5. Error logging
+
+## Maintenance
+1. Regular dependency updates
+2. Code reviews
+3. Performance optimization
+4. Bug tracking
+5. User feedback implementation 

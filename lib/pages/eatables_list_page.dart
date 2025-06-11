@@ -195,7 +195,7 @@ class _EatablesListPageState extends State<EatablesListPage>
         ),
         title: const Text(
           'List of eatables Jahanian',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(
@@ -250,6 +250,7 @@ class _EatablesListPageState extends State<EatablesListPage>
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
+                color: Colors.black,
               ),
             ),
           ),
